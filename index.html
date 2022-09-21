@@ -15,91 +15,117 @@
     <div class="sidebar">
       <div>Dashboard</div>
       <div>
-        <div>Home</div>
-        <div>Messages</div>
-        <div>History</div>
-        <div>Tasks</div>
-        <div>Communities</div>
+        <a href="#">Home</a>
+        <a href="#">Messages</a>
+        <a href="#">History</a>
+        <a href="#">Tasks</a>
+        <a href="#">Communities</a>
       </div>
       <div>
-        <div>Settings</div>
-        <div>Support</div>
-        <div>Privacy</div>
+        <a href="#">Settings</a>
+        <a href="#">Support</a>
+        <a href="#">Privacy</a>
       </div>
     </div>
     <div class="header">
       <div>
         <div>
-          <label for="search">Search bar</label>
-          <input type="search" name="search" id="searh">
+          <input type="search" name="search" id="searh" aria-label="search">
         </div>
         <div>
-          <div>Aadheuss</div>
+          <a href="#" class="user-profile">Aadheuss</a>
         </div>
       </div>
       <div>
-        <div>
+        <div class="greeting">
           <div>
             <div>hi there,</div>
-            <div>Aadheuss (@Aadheuss)</div>
+            <div class="username">Aadheuss (@Aadheuss)</div>
           </div>
         </div>
         <div>
-          <div>New</div>
-          <div>Upload</div>
-          <div>Share</div>
+          <button type="button">New</button>
+          <button type="button">Upload</button>
+          <button type="button">Share</button>
         </div>
       </div>
     </div>
     <div class="main-content">
       <div class="project">
         <div>Your Projects</div>
-        <div class="card">
-          <p>Super Cool Project</p>
-          <p>Sed tempus ut lacus ut scelerisque. Suspendisse solicitudin nibh erat, id facilisis felis accumsan nec.</p>
+        <div class="cards">
+          <div class="card">
+            <a href="#">Super Cool Project</a>
+            <div>Sed tempus ut lacus ut scelerisque. Suspendisse solicitudin nibh erat, id facilisis felis accumsan nec.
+            </div>
+          </div>
+          <div class="card">
+            <a href="#">Less Cool Project</a>
+            <div>Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor tincidunt, consectetur 
+              sapien et, facilisis dolor. Duis sem purus, dignissim ut sapien in, varius pellentesque lacus.
+            </div>
+          </div>
+          <div class="card">
+            <a href="#">Impossible App</a>
+            <div>In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a placerat velit sagittis id.</div>
+          </div>
+          <div class="card">
+            <a href="#">Easy Peasy App</a>
+            <div>Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim urna eget accumsan aliquam. Curabitur
+                dignissim nisi in tortor commodo, ac bibendum magna tincidunt.
+            </div>
+          </div>
+          <div class="card">
+            <a href="#">Add Blocker</a>
+            <div>Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus vel, pharetra hendrerit felis. Aliquam 
+              sed malesuada eros.
+            </div>
+          </div>
+          <div class="card">
+            <a href="#">Money Maker</a>
+            <div>Praesent convalis, libero quis conque elementum, nunc ante faucibus sapien, ac scelerisque tortor purus
+               sitamet ex. Pellentesque mollis nec sem vel aliquam.
+            </div>
         </div>
-        <div class="card">
-          <p>Less Cool Project</p>
-        </div>
-        <div class="card">
-          <p>Impossible App</p>
-        </div>
-        <div class="card">
-          <p>Easy Peasy App</p>
-        </div>
-        <div class="card">
-          <p>Add Blocker</p>
-        </div>
-        <div class="card">
-          <p>Money Maker</p>
         </div>
       </div>
       <div class="side-content">
         <div class="announcements">
           <div>Announcements</div>
           <div class="content">
-            <div>Site Maintenance</div>
-            <div>Community Share Day</div>
-            <div>Updated Privacy Policy</div>
+            <div>
+              <a href="#">Site Maintenance</a>
+              <div>Vestibulum condimentum tellus lacus, in accumsan elit maximus ac. Donect hendrerit sodales congue...
+              </div>
+            </div>
+            <div>
+              <a href="#">Community Share Day</a>
+              <div>Nam vel lectus tincidunt, rutrum nulla eu, ornare libero. Aliquuam dictum accumsan prttitor...</div>
+            </div>
+            <div>
+              <a href="#">Updated Privacy Policy</a>
+              <div>Phasellus efficitur nisi eget elit consectetur, eget condimentum ante auctor. Cras fringilla sagittis 
+                sem in mattis...</div>
+            </div>
           </div>
         </div>
         <div class="trending">
           <div>Trending</div>
           <div class="content">
             <div>
-              <div>@adrian</div>
+              <a href="#">@adrian</a>
               <div>Frontend Dev</div>
             </div>
             <div>
-              <div>@sunflower</div>
+              <a href="#">@sunflower</a>
               <div>Task Supervisor</div>
             </div>
             <div>
-              <div>@littlebug</div>
+              <a href="#">@littlebug</a>
               <div>Ad Manager</div>
             </div>
             <div>
-              <div>@alex</div>
+              <a href="#">@alex</a>
               <div>Fullstack Dev</div>
             </div>
           </div>
