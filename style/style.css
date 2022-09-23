@@ -403,6 +403,7 @@ a {
   background-color: var(--light-grey);
   width: 45vw;
   height: 1.5rem;
+  padding: 1rem;
 }
 
 input:focus-visible {
