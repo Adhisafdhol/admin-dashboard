@@ -490,11 +490,6 @@ input:focus-visible {
   background-color: var(--white);
 }
 
-.announcements,
-.trending {
-  flex-direction: column;
-}
-
 .header,
 .header a,
 .project > div:first-child,
@@ -683,7 +678,7 @@ input:focus-visible {
   background-image: var(--avatar4);
 }
 
-/*flex elements*/ 
+  /*grid elements*/
   .sidebar > div:first-child,
   .sidebar > div:not(:first-child),
   .sidebar > div:not(:first-child) > a,
@@ -700,66 +695,76 @@ input:focus-visible {
   .side-content ,
   .announcements,
   .trending,
-  .trending > .content  {
-    display: flex;
+  .trending > .content {
+    display:grid;
+    justify-content: start;
     gap: 1rem;
   }
-
+  
   .sidebar > div:first-child {
-    align-items: center;
     gap: 0.5rem;
+  }
+
+  .sidebar > div:first-child,
+  .sidebar > div:not(:first-child) > a {
+    grid-template-columns: auto auto;
+    align-items: center;
   }
   
   .sidebar > div:not(:first-child) {
-    flex-direction: column;
     gap: 1.25rem;
   }
-  
+
   .header {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
     gap: 0.5rem;
     background-color: var(--white);
     padding: 1rem 1.5rem;
   }
-
+  
   .header > div {
-    align-items: center;
     justify-content: space-between;
   }
-  
-  .header > div > div:last-child {
+
+  .header > div,
+  .header > div > div:last-child,
+  .user-profile > span,
+  .greeting  {
+    grid-auto-flow: column;
     align-items: center;
   }
 
-  .sidebar > div:not(:first-child) > a {
-    align-items: center;
-  }
 
   .search-bar {
-    justify-content: center;
-  }
-
-  .user-profile > span {
-    align-items: center;
+    grid-auto-flow: column;
   }
 
   .greeting {
-    align-items: center;
     gap: 0.75rem;
   }
 
-  .card > :last-child {
+  .card > :last-child,
+  .card > :last-child > span {
+    grid-auto-flow: column;
     align-self: end;
     justify-self: end;
   }
-
+  
   .side-content {
-    flex-direction: column;
+    grid-auto-flow: row;
+    align-content: start;
     gap: 2rem;
   }
 
+  .announcements,
+  .trending {
+    justify-content: stretch;
+  }
+
   .trending > .content {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
     gap: 0.5rem;
   }
 
