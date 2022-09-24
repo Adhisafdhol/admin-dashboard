@@ -367,7 +367,7 @@ template {
 
 #container {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: max(300px, 20vw) 1fr;
   grid-template-rows: auto auto;
 }
 
@@ -410,7 +410,7 @@ input:focus-visible {
   outline: var(--main-color) 1.5px double;
 }
 
-.header button {
+.header button:not(.search) {
   cursor: pointer;
   background-color: var(--main-color);
   border: none;
@@ -420,6 +420,14 @@ input:focus-visible {
   font-weight: 600;
   font-size: 1rem;
   color: var(--white);
+}
+
+.search {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #F8FAFC;
+  cursor: pointer;
 }
 
 .user-profile {
@@ -536,7 +544,7 @@ input:focus-visible {
 /* Pseudo elements starts here*/
 .sidebar > div:first-child:before,
 .sidebar > div:not(:first-child) > a::before,
-.search-bar::before,
+.search::before,
 .user-profile > span::before,
 .user-profile > span::after,
 .greeting::before,
@@ -566,12 +574,11 @@ input:focus-visible {
 }
 
 /*header pseudo elements*/
-.search-bar::before {
+.search::before {
   background-image: url(../img/icon/magnify.svg);
   background-size: 30px 30px;
   width: 30px;
   height: 30px;
-  cursor: pointer;
 }
 
 .user-profile > span::before {
@@ -748,6 +755,7 @@ input:focus-visible {
 
   .side-content {
     flex-direction: column;
+    gap: 2rem;
   }
 
   .trending > .content {
